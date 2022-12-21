@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 14%);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: rgb(240, 96, 24);
+}
+
+.card:hover .content h5,
+.card:hover .content p {
+  color: white;
+}
+
+.card img {
+  border-radius: 6px;
+  object-fit: cover;
+  width: 40%;
+}
+
+.content {
+  padding: 10px;
+  width: 100%;
+}
+
+.content h5 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.content p {
+  color: rgb(114, 115, 130);
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-weight: bold;
+  color: orange;
+}
+
+.social button {
+  background-color: transparent;
+  border: 0px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .content h5 {
+    font-size: 16px;
+  }
+
+  .footer {
+    justify-content: space-between;
+  }
+}
